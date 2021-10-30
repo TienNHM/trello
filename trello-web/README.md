@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<h1 align="center">Hi 👋, I'm Minh Tien</h1>
+<p align="center"><img src="https://img.icons8.com/color/48/000000/vietnam-circular.png"/></p>
+<h3 align="center">A passionate developer from Vietnam </h3>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=tiennhm" alt="tiennhm" /> <img src="https://badges.pufler.dev/repos/TienNHM" alt="tiennhm" /> </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- ✍ I'm a student of: [Ho Chi Minh city University of Technology and Education](https://hcmute.edu.vn) (HCMUTE).
 
-## Available Scripts
+- 🌱 I’m currently learning **MERN Stack**
 
-In the project directory, you can run:
 
-### `yarn start`
+## 📫 How to reach me:
+<p align="center">
+  <a href="https://linkedin.com/in/tien-nhm" target="_blank">
+    <img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/>
+  </a>
+  <a href="https://www.facebook.com/01.tien" alt="Facebook">
+    <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" target="_blank" />
+  </a> 
+  <a href="https://github.com/TienNHM" alt="Github">
+    <img src="https://img.icons8.com/fluent/48/000000/github.png"/>
+  </a> 
+  <a href="https://www.youtube.com/channel/UCaRr1SjyHm61RrLY-DIBm1g" alt="Youtube channel" target="_blank" >
+    <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png"/>
+  </a>
+  <a href="https://www.kaggle.com/nguyenhuynhminhtien" alt="Kaggle" target="_blank" >
+    <img src="https://img.icons8.com/windows/48/000000/kaggle.png"/>
+  </a>
+  <a href="mailto:tiennhm.it@gmail.com" alt="Email">
+    <img src="https://img.icons8.com/fluent/48/000000/mailing.png"/>
+  </a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Skills:
+<p align="center">
+  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="48" height="48"/> 
+  <img src="https://img.icons8.com/color/48/000000/microsoft-sql-server.png"/>
+  <img src="https://img.icons8.com/color/48/000000/mongodb.png"/>
+  <img src="https://img.icons8.com/fluent/48/000000/matlab.png"/>
+  <img src="https://img.icons8.com/color/48/000000/git.png"/>
+  <img src="https://img.icons8.com/color/48/000000/github-2.png"/>
+  <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/>
+  <img src="https://img.icons8.com/color/48/000000/visual-studio-2019.png"/>
+  <img src="https://img.icons8.com/dusk/48/000000/anaconda.png"/>
+  <img src="https://img.icons8.com/fluent/48/000000/spyder-ide.png"/>
+  <img src="https://img.icons8.com/color/48/000000/trello.png"/>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table style="width:100%;">
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tiennhm&layout=compact&hide=CSS&langs_count=10&custom_title=Top%20ngôn%20ngữ%20được%20dùng" alt="tiennhm" width="100%"/>
+      <img src="https://github-readme-stats.vercel.app/api?username=tiennhm&show_icons=true&count_private=true&include_all_commits=true&custom_title=Hoạt%20động%20trên%20Github" alt="tiennhm" width="100%"/>
+    </td>
+    <td>
+      <p align="center"> 
+        <img src="https://cdn.dribbble.com/users/1059583/screenshots/4171367/coding-freak.gif" alt="dev" width="100%"/>
+      </p>
+    </td>
+  </tr>
+</table>

@@ -2,21 +2,19 @@
 
 $card-border-radius: 4px;
 
-li.card-item {
-    background-color: white;
-    padding: $gap;
-    border-radius: $card-border-radius;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+.card-item {
+  background-color: white;
+  padding: $gap;
+  border-radius: $card-border-radius;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-bottom: $gap;
 
-    &:not(:last-child) {
-        margin-bottom: $gap;
-    }
-
-    img.card-cover {
-        display: block;
-        width: calc(100% + 2*#{$gap});
-        margin: -$gap 0 $gap (-$gap);
-        border-bottom-left-radius: $card-border-radius;
-        border-bottom-right-radius: $card-border-radius;
-    }
+  img.card-cover {
+    display: block;
+    width: calc(100% + 2*#{$gap});
+    margin: -$gap 0 $gap (-$gap);
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+  }
 }

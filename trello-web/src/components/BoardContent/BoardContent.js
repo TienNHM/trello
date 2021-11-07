@@ -10,12 +10,19 @@ import { applyDrag } from 'utilities/dragDrop'
 import Column from 'components/Column/Column'
 
 function BoardContent() {
-  const [board, setBoard] = useState({ })
+  const emptyBoard = {
+    id: '',
+    title: '',
+    columnOrder: [],
+    columns: []
+  }
+  const [board, setBoard] = useState(emptyBoard)
   const [columns, setColumns] = useState([])
   const [openNewColumnForm, setOpenNewColumnForm] = useState(false)
   const [newColumnTitle, setNewColumnTitle] = useState('')
-  const newColumnInputRef = useRef(null)
+  const newColumnInputRef = useRef(null) // Lưu ref đến đối tượng text input nhập title cho column mới
 
+  // Load data
   useEffect(() => {
     const boardFromDB = initialData.boards.find(board => board.id === 'board-1')
     if (boardFromDB) {
@@ -27,6 +34,7 @@ function BoardContent() {
 
   }, [])
 
+  // Được gọi mỗi khi dữ liệu lưu trong `openNewColumnForm` thay đổi
   useEffect(() => {
     if (newColumnInputRef && newColumnInputRef.current) {
       newColumnInputRef.current.focus()
@@ -42,6 +50,10 @@ function BoardContent() {
     )
   }
 
+  /**
+   * Xử lý sự kiện kéo thả column
+   * @param {*} dropResult kết quả kéo thả
+   */
   const onColumnDrop = (dropResult) => {
     // Tạo bản sao
     let newColumns = [...columns]
@@ -59,6 +71,11 @@ function BoardContent() {
     setBoard(newBoard)
   }
 
+  /**
+   * Xử lý sự kiện kéo thả card
+   * @param {*} columnId id của column hiện tại
+   * @param {*} dropResult kết quả kéo thả
+   */
   const onCardDrop = (columnId, dropResult) => {
     if (dropResult.addedIndex != null || dropResult.removedIndex != null) {
       // Tạo bản sao
@@ -74,7 +91,13 @@ function BoardContent() {
     }
   }
 
+  /**
+   * Thêm mới 1 column vào board
+   * - Nếu chưa nhập column title: focus và chọn tất cả text trong ô input title
+   * - Nếu đã nhập title: tạo mới 1 column và thêm vào board
+   */
   const addNewColumn = () => {
+    // Nếu chưa nhập title thì để cho người dùng quay lại nhập title
     if (!newColumnTitle)
     {
       newColumnInputRef.current.focus()
@@ -101,14 +124,27 @@ function BoardContent() {
     // Gán lại các columns theo thứ tự mới
     newBoard.columns = newColumns
 
+    // Cập nhật state cho columns
     setColumns(newColumns)
+    // Cập nhật state cho board
     setBoard(newBoard)
+    // Gán lại title là ''
     setNewColumnTitle('')
+    // Đóng form nhập title
     setOpenNewColumnForm(false)
   }
 
+  /**
+   * Dùng để thay đổi state openNewColumnForm xem có mở/đóng form nhập title cho column mới hay không.
+   * @returns void
+   */
   const toggleOpenNewColumnForm = () => setOpenNewColumnForm(!openNewColumnForm)
 
+  /**
+   * Cập nhật state cho newColumnTitle mỗi khi text ở ô input thay đổi
+   * @param {*} event đối tượng lưu giá trị text hiện tại
+   * @returns void
+   */
   const onNewColumnTitleChange = (event) => setNewColumnTitle(event.target.value)
 
   return (
@@ -143,12 +179,11 @@ function BoardContent() {
           <Row>
             <Col className="enter-new-column">
               <Form.Control size="sm" type="text"
-                placeholder="Enter column title..."
-                className="input-enter-new-column"
+                placeholder="Enter column title..." className="input-enter-new-column"
                 ref={newColumnInputRef}
                 value={newColumnTitle}
                 onChange={onNewColumnTitleChange}
-                onKeyDown={(event) => (event.key === 'Enter') && addNewColumn()}
+                onKeyDown={(event) => (event.key === 'Enter') && addNewColumn()} // Nếu nhấn Enter thì tạo mới column
               />
               <Button variant="success" size="sm" onClick={addNewColumn}>Add column</Button>{' '}
               <span className="cancel-add-new-column" onClick={toggleOpenNewColumnForm}>

@@ -40,8 +40,12 @@ body {
     }
 
     .btn:focus, .btn:active {
-      outline: none;
-      box-shadow: none;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    .content-editable {
+      background-color: inherit;
     }
   }
 }

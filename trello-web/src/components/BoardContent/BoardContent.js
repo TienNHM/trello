@@ -98,8 +98,7 @@ function BoardContent() {
    */
   const addNewColumn = () => {
     // Nếu chưa nhập title thì để cho người dùng quay lại nhập title
-    if (!newColumnTitle)
-    {
+    if (!newColumnTitle) {
       newColumnInputRef.current.focus()
       newColumnInputRef.current.select()
       return
@@ -147,6 +146,34 @@ function BoardContent() {
    */
   const onNewColumnTitleChange = (event) => setNewColumnTitle(event.target.value)
 
+  const onUpdateColumn = (newColumnToUpdate) => {
+    const columnIdToUpdate = newColumnToUpdate.id
+
+    let newColumns = [...columns]
+    const columnIndexToUpdate = newColumns.findIndex(c => c.id === columnIdToUpdate)
+
+    if (newColumnToUpdate._destroy) {
+      // Remove column
+      newColumns.splice(columnIndexToUpdate, 1)
+    }
+    else {
+      // Updated
+      newColumns.splice(columnIndexToUpdate, 1, newColumnToUpdate)
+    }
+
+    // Tạo bản sao
+    let newBoard = { ...board }
+    // Sắp xếp lại columnOrder theo thứ tự của newColumns
+    newBoard.columnOrder = newColumns.map(column => column.id)
+    // Gán lại các columns theo thứ tự mới
+    newBoard.columns = newColumns
+
+    // Cập nhật state cho columns
+    setColumns(newColumns)
+    // Cập nhật state cho board
+    setBoard(newBoard)
+  }
+
   return (
     <div className="board-content">
       <Container
@@ -162,7 +189,7 @@ function BoardContent() {
       >
         {columns.map(column => (
           <Draggable key={column.id}>
-            <Column column={column} onCardDrop={onCardDrop} />
+            <Column column={column} onCardDrop={onCardDrop} onUpdateColumn={onUpdateColumn} />
           </Draggable>
         ))}
       </Container>

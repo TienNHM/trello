@@ -60,19 +60,5 @@
     input.input-enter-new-column {
       margin: 5px 0;
     }
-
-    span.cancel-add-new-column {
-      margin-left: $gap;
-      cursor: pointer;
-
-      i {
-        font-size: 20px;
-        color: $alert-danger;
-
-        &:hover {
-          color: darken($color: $alert-danger, $amount: 15);
-        }
-      }
-    }
   }
 }

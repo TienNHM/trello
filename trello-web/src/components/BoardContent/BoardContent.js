@@ -18,9 +18,14 @@ function BoardContent() {
   }
   const [board, setBoard] = useState(emptyBoard)
   const [columns, setColumns] = useState([])
-  const [openNewColumnForm, setOpenNewColumnForm] = useState(false)
   const [newColumnTitle, setNewColumnTitle] = useState('')
   const newColumnInputRef = useRef(null) // Lưu ref đến đối tượng text input nhập title cho column mới
+  const [openNewColumnForm, setOpenNewColumnForm] = useState(false)
+  /**
+   * Dùng để thay đổi state openNewColumnForm xem có mở/đóng form nhập title cho column mới hay không.
+   * @returns void
+   */
+  const toggleOpenNewColumnForm = () => setOpenNewColumnForm(!openNewColumnForm)
 
   // Load data
   useEffect(() => {
@@ -134,12 +139,6 @@ function BoardContent() {
   }
 
   /**
-   * Dùng để thay đổi state openNewColumnForm xem có mở/đóng form nhập title cho column mới hay không.
-   * @returns void
-   */
-  const toggleOpenNewColumnForm = () => setOpenNewColumnForm(!openNewColumnForm)
-
-  /**
    * Cập nhật state cho newColumnTitle mỗi khi text ở ô input thay đổi
    * @param {*} event đối tượng lưu giá trị text hiện tại
    * @returns void
@@ -189,7 +188,11 @@ function BoardContent() {
       >
         {columns.map(column => (
           <Draggable key={column.id}>
-            <Column column={column} onCardDrop={onCardDrop} onUpdateColumn={onUpdateColumn} />
+            <Column
+              column={column}
+              onCardDrop={onCardDrop}
+              onUpdateColumn={onUpdateColumn}
+            />
           </Draggable>
         ))}
       </Container>
@@ -213,7 +216,7 @@ function BoardContent() {
                 onKeyDown={(event) => (event.key === 'Enter') && addNewColumn()} // Nếu nhấn Enter thì tạo mới column
               />
               <Button variant="success" size="sm" onClick={addNewColumn}>Add column</Button>{' '}
-              <span className="cancel-add-new-column" onClick={toggleOpenNewColumnForm}>
+              <span className="cancel-icon" onClick={toggleOpenNewColumnForm}>
                 <i className="fa fa-times icon"></i>
               </span>
             </Col>
